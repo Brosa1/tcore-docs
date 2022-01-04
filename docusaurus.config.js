@@ -49,13 +49,7 @@ const config = {
           width: "147px",
           height: "30px",
         },
-        items: [
-          {
-            href: 'https://github.com/tago-io/tcore',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+        items: [],
       },
       footer: {
         style: 'light',
