@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'TagoCore Docs',
   url: 'https://tagocore.com',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -44,7 +44,8 @@ const config = {
           alt: 'TagoCore Logo',
           src: 'img/tagocore-logo-black.svg',
           srcDark: 'img/tagocore-logo-white.svg',
-          href: '/',
+          href: 'https://tagocore.com',
+          target: '_self',
           width: "147px",
           height: "30px",
         },
