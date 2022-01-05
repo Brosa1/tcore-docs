@@ -15,6 +15,24 @@ const config = {
   organizationName: 'tago-io', // Usually your GitHub org/user name.
   projectName: 'tcore', // Usually your repo name.
 
+  plugins: [
+    // ... Your other plugins.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        docsRouteBasePath: "/",
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+        // When applying `zh` in language, please install `nodejieba` in your project.
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -23,11 +41,12 @@ const config = {
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/tago-io/tcore-docs/tree/main/docs/',
+          editUrl: 'https://github.com/tago-io/tcore-docs/tree/main/',
         },
         blog: {
+          routeBasePath: "/blog",
           showReadingTime: true,
-          editUrl: 'https://github.com/tago-io/tcore-docs/tree/main/blog/',
+          editUrl: 'https://github.com/tago-io/tcore-docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -39,6 +58,23 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+        switchConfig: {
+          darkIcon: ' ',
+          darkIconStyle: {
+            marginLeft: '2px',
+          },
+          // Unicode icons such as '\u2600' will work
+          // Unicode with 5 chars require brackets: '\u{1F602}'
+          lightIcon: ' ',
+          lightIconStyle: {
+            marginLeft: '1px',
+          },
+        },
+      },
       navbar: {
         logo: {
           alt: 'TagoCore Logo',
