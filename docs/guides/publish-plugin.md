@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Publishing a Plugin
+slug: /plugins/publish
 ---
 
 # Publishing a Plugin

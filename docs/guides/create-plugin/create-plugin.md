@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Create a Plugin
+slug: /plugins/create
 ---
 
 # Create a Plugin
