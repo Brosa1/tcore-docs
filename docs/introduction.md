@@ -50,4 +50,4 @@ Check out our [Analysis Overview](/analysis) to learn more.
 
 Missing something? Don't worry. With TagoCore you can install plugins from developers directly inside of the application! Our plugins range from **Raspberry Pi GPIO integrations** all the way to **MQTT connections**.
 
-And if you didn't find what you were looking for in the Plugin Store, you can [create your very own Plugin](/plugins/create) by using our powerful TagoCore SDK.
+<!-- And if you didn't find what you were looking for in the Plugin Store, you can [create your very own Plugin](/plugins/create) by using our powerful TagoCore SDK. -->

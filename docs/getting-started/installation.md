@@ -58,6 +58,6 @@ TagoCore is now available at http://localhost:8888
 
 That's it! Access the URL in your browser and start building your applications.
 
-## Next Steps
+<!-- ## Next Steps
 
-If you have no idea how TagoCore works, you should check out our [TagoCore Overview](/overview). However, if you are already familiar with some concepts, you can engage with [our community](https://community.tago.io/c/tagocore/19) by answering questions from other folks!
+If you have no idea how TagoCore works, you should check out our [TagoCore Overview](/overview). However, if you are already familiar with some concepts, you can engage with [our community](https://community.tago.io/c/tagocore/19) by answering questions from other folks! -->
