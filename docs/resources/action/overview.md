@@ -12,7 +12,7 @@ With Actions you can:
 
 - Run scripts using an [Analysis](/analysis);
 - Make HTTP POST requests to endpoints;
-- Use [triggers](/action/trigger) and [types](/action/types) from Plugins;
+- Use [triggers](/action/trigger) and [types](/action/type) from Plugins;
 - And many more, in the future.
 
 
