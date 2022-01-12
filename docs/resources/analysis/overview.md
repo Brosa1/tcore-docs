@@ -8,9 +8,18 @@ slug: /analysis
 
 Analysis is a powerful feature that experts and developers can use to implement scripts to analyze and manipulate data from any device in real-time.
 
+
+## Adding a Device
+
+To add a new device, press the&nbsp; <img className="inline-image" src="/docs/img/analysis/add-analysis-button.png" height="25px" /> &nbsp;button in the **Devices** page. Once you press the button, the **Add Analysis** modal will appear for you to insert a new Analysis:
+
+<img className="big-image" src="/docs/img/analysis/add-analysis-modal.png" height="200px" />
+
+In this modal, you must define a name for your Analysis in order to continue.
+
 ## Supported Languages
 
-With an Analysis, you are able to execute **any type of code** in **any language** you desire. The way this is achieved is through the `Binary Executable path` and the `File path` fields.
+Within an Analysis, you are able to execute **any type of code** in **any language** you desire. The way this is achieved is through the `Binary Executable path` and the `File path` fields.
 
 ### Binary executable path
 
@@ -35,9 +44,7 @@ The File path field allows you to select a file that will be passed as a command
 
 Let's pretend you want to run code in Node.js. To achieve this, you could install [nvm](https://github.com/nvm-sh/nvm) in your local machine and then use the `node` executable provided by nvm in the **Binary executable path** field. After this, you may select a file in the **File path** field, like so:
 
-<center>
-  <img src="/docs/img/analysis/code-section.png" width="70%" />
-</center>
+<img className="big-image" src="/docs/img/analysis/code-section.png" width="70%" />
 
 Under the hood, TagoCore would use the following terminal command to run your analysis:
 
@@ -49,9 +56,9 @@ Under the hood, TagoCore would use the following terminal command to run your an
 
 There are 3 ways to execute your Analysis:
 
-1. You can set up an [Action](/action) that triggers your Analysis when certain events happen
-2. You can manually execute your Analysis by clicking the **Run** button at the bottom of the page
-3. You can manually execute your Analysis by making a POST request to `/analysis/:id/run`
+1. You can set up an [Action](/action) that triggers your Analysis when certain events happen;
+2. You can manually execute your Analysis by clicking the **Run** button at the bottom of the page;
+3. You can manually execute your Analysis by making a POST request to `/analysis/:id/run`.
 
 ## Writing code
 

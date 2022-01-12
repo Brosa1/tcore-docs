@@ -10,6 +10,8 @@ The Analysis Console shows the output of your Analysis' code, as well as any val
 
 The latest logs from your code will always be on top of the Console, and each log will have a timestamp that indicates when the log was outputted.
 
+There are no log limits.
+
 ## Adding logs
 
 The Analysis system automatically picks up anything that your code outputs to the [stdout](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)) or [stderr](https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)) streams and adds it to the logs.
