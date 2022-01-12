@@ -32,9 +32,8 @@ The `TAGOCORE_DATA` environment variable will contain an array of objects or a s
 With an Analysis, you are able to execute **any type of code** in **any language** you desire. The way this is achieved is through the `Binary Executable path` and the `File path` fields. For more information, see our [Analysis Overview](/analysis) article.
 
 :::tip Good to know
-- Your code **doesn't need** to be in a function;
-- You do not need to use a `return` statement at the end of your code;
-- You cannot use `require`, `import`, or `window` inside of your code.
+- Your code **doesn't have** to be in a function;
+- You do not have to use a `return` statement at the end of your code;
 :::
 
 ## Code sample
