@@ -43,11 +43,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/tago-io/tcore-docs/tree/main/',
         },
-        blog: {
-          routeBasePath: "/blog",
-          showReadingTime: true,
-          editUrl: 'https://github.com/tago-io/tcore-docs/tree/main/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
