@@ -9,7 +9,7 @@ slug: /analysis/code
 You may write your Analysis' code in whatever way you prefer. However, we do have some coding guidelines, best practices, and tips
 that may help you in your quest to create powerful Analyses.
 
-## Retrieving data
+## Using data
 
 You can run your Analysis in many different ways, and one of them is by using an [Action](/action).
 
