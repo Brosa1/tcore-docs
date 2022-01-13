@@ -14,7 +14,7 @@ When a [Device](/device) is created, TagoCore automatically creates a Bucket for
 
 ## Adding a Bucket
 
-To add a new Bucket, press the&nbsp; <img className="inline-image" src="/docs/img/bucket/add-bucket-button.png" height="25px" /> &nbsp;button in the **Buckets** page. Once you press the button, the **Add Bucket** modal will appear for you to insert a new bucket:
+To add a new Bucket, press the&nbsp; <img className="inline-image" src="/docs/img/bucket/add-bucket-button.png" height="25px" /> &nbsp;button on the **Buckets** page. Once you press the button, the **Add Bucket** modal will appear for you to insert a new bucket:
 
 <img className="big-image" src="/docs/img/bucket/add-bucket-modal.png" height="400px" />
 
