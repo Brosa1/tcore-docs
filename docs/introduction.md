@@ -16,7 +16,7 @@ We know your time is valuable, so we'll help you understand TagoCore in 5 minute
 
 TagoCore is a **free**, **fast**, and **open-source** IoT platform for edge computing that you can use to parse, and analyze the data from your devices!
 
-TagoCore supports all major operating systems, and can be downloaded in our [Downloads page](https://tagocore.com/download).
+TagoCore supports all major operating systems, and can be downloaded from our [Downloads page](https://tagocore.com/download).
 
 Once you have [downloaded and decompressed](/download) TagoCore, you can run it by opening a terminal in the folder where `tagocore` is located and typing the following command:
 
@@ -32,7 +32,7 @@ Devices are the link between the data in your TagoCore and your devices in the r
 
 ### Buckets
 
-Buckets are where data from your Devices is stored. You may create as many buckets as you wish. [Learn more about Buckets](/bucket).
+Buckets are where the data from your Devices are stored. You may create as many buckets as you wish. [Learn more about Buckets](/bucket).
 
 :::tip
 When a Device is created, TagoCore automatically creates a bucket for it with the same name.
@@ -48,6 +48,6 @@ Check out our [Analysis Overview](/analysis) to learn more.
 
 ### Plugins
 
-Missing something? Don't worry. With TagoCore you can install plugins from developers directly inside of the application! Our plugins range from **Raspberry Pi GPIO integrations** all the way to **MQTT connections**.
+Missing something? Don't worry! With TagoCore you can install plugins from developers directly inside of the application. Our plugins range from **Raspberry Pi GPIO integrations** all the way to **MQTT connections**.
 
 <!-- And if you didn't find what you were looking for in the Plugin Store, you can [create your very own Plugin](/plugins/create) by using our powerful TagoCore SDK. -->
