@@ -32,7 +32,7 @@ After setting up the [Device](/device), you should set a condition for your Acti
   - **Equal to**: matches when the value of the variable is equal to the value defined;
   - **Different from**: matches when the value of the variable is different from the value defined;
   - **Any**: matches whenever a new value of the variable is sent to the bucket;
-  - **Between**: matches when the new value is between a fixed value range;
+  - **Between**: matches when the new value is between a fixed value range.
 3. **Set a value** to complement the condition. In the example above, the value for the condition is 15.
 
 ## Roadmap
