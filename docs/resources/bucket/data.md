@@ -24,7 +24,7 @@ The JSON of a data point has the same structure as defined in our [TagoIO Cloud]
 }
 ```
 
-For more information on other common specifications, check out [API Overview](https://help.tago.io/portal/en/kb/articles/31-api-overview#Security).
+For more information on other common specifications, check out our [API Overview](https://help.tago.io/portal/en/kb/articles/31-api-overview#Security).
 
 ## Sending data
 
