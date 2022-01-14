@@ -8,14 +8,14 @@ slug: /log
 
 Application Logs allow you to visualize the logs of the application and plugins.
 
-To access this page, click on the &nbsp;<img src="/docs/img/icons/scroll.svg" width="15px"/>&nbsp; button located in the upper right corner of the screen.
+To access this page, click on the &nbsp;<img src="/docs/img/icons/scroll.svg" width="15px"/>&nbsp; button located on the upper right-hand corner of the screen.
 
 
 ## Channel
 
-You can select which log channel to view. By default, this option is set to `Application`, which means that only the native TagoCore application logs are shown in the screen.
+You can select which log channel to view. By default, this option is set to `Application`, which means that only the native TagoCore application logs are shown on the screen.
 
-Each plugin has it's own log channel, so if you want to see the logs for a specific plugin, just select its channel.
+Each plugin has its own log channel, so if you want to see the logs for a specific plugin, just select its channel.
 
 ## Type
 
