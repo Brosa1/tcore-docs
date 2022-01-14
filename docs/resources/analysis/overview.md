@@ -11,7 +11,7 @@ Analysis is a powerful feature that experts and developers can use to implement 
 
 ## Adding an Analysis
 
-To add a new Analysis, press the&nbsp; <img className="inline-image" src="/docs/img/analysis/add-analysis-button.png" height="25px" /> &nbsp;button in the **Analyses** page. Once you press the button, the **Add Analysis** modal will appear for you to insert a new Analysis:
+To add a new Analysis, press the&nbsp; <img className="inline-image" src="/docs/img/analysis/add-analysis-button.png" height="25px" /> &nbsp;button on the **Analyses** page. Once you press the button, the **Add Analysis** modal will appear for you to insert a new Analysis:
 
 <img className="big-image" src="/docs/img/analysis/add-analysis-modal.png" height="200px" />
 
@@ -62,7 +62,7 @@ There are 3 ways to execute your Analysis:
 
 ## Writing code
 
-You may write your Analysis' code in whatever way you prefer. However, we do have some coding guidelines and best practices
+You may write your Analysis's code in whatever way you prefer. However, we do have some coding guidelines and best practices
 that may help you in your quest to create powerful Analyses.
 
 To learn more about best practices, coding guidelines, and how to retrieve [Bucket](/bucket) data inside of your Analysis, check out the [Analysis Code](/analysis/code) article.
