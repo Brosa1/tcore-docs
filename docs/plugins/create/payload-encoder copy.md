@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: PayloadEncoder
-slug: /plugins/create/payload-encoder
+title: PayloadEncoderModule
+slug: /plugins/create/encoder
 ---
 
 # PayloadEncoderModule
@@ -14,7 +14,7 @@ The flow works as follows:
 Device sends data -----> PayloadEncoderModule ----> Payload Parser ---> Bucket
 ```
 
-Once the device sends data, the data is immediately forwarded to the first `PayloadEncoderModule` found, which is defined through the `priority` field in the Plugin Settings.
+Once the device sends data, the data is immediately forwarded to the first `PayloadEncoderModule` found, which is defined by the `encoder_stack` field of the device.
 
 After the first `PayloadEncoderModule` resolves a value, the value passes sequentially through all the remaining `PayloadEncoderModule` classes.
 
@@ -25,7 +25,7 @@ The value received in your `PayloadEncoderModule` class may have already been pa
 ## Sample code
 
 ```js
-const { PayloadEncoderModule } = require("@tago-io/tagocore-sdk");
+const { PayloadEncoderModule } = require("@tago-io/tcore-sdk");
 
 const myEncoderPlugin = new PayloadEncoderModule({
   id: "number-to-hex-encoder",

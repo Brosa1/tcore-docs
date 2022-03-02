@@ -6,64 +6,150 @@ slug: /plugins/create/core
 
 # Core
 
-The Core object allows your plugin to interact with data in a TagoCore application.
+The Core object allows your plugin to interact with data in a TagoCore application. In order to use the core object, you must call one of its functions. Here is a list of all core functions:
 
-## How it works
 
-As soon the Plugin is loaded, the `onLoad` function of the module will be invoked. You can override this function to execute your code, such as to start an http server or to run analytics on some data you have stored.
+## Device functions
 
-Just like all other modules, the `onDestroy` function will be invoked just before the module is stopped. You can override this function if you wish to clean up your code before the module is destroyed.
+All functions in this category need the `device` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
 
-## Service status
+### getDeviceList
+Retrieves a list of devices.
+- Parameter: Query to filter and organize the list;
 
-Besides the default invocations of these functions, they may also be invoked when the user **starts** or **stops** the service in the Plugin Configuration screen via the **Service status** buttons.
+### getDeviceInfo
+Retrieves all the information of a single device.
+- Parameter: ID of the device;
 
-The service status will always reflect the current execution status of your service.
+### getDeviceByToken
+Retrieves all the information of a single device via its token.
+- Parameter: Token of the device;
 
-<img className="big-image" src="/docs/img/service-status.png" height="50px" />
+### editDevice
+Edits the information of a single device.
+- Parameter: ID of the device;
+- Parameter: Data to edit the device;
 
-:::info
-The service status is not saved as a setting. If an user stops your service and restarts TagoCore, your module's `onLoad` function will be called normally once your plugin starts.
-:::
+### deleteDevice
+Deletes a device.
+- Parameter: ID of the device;
 
-:::tip Good to know
-The `onDestroy` function will never be invoked before the `onLoad`. You can be confident that the code in the `onLoad` function will always be executed first.
-:::
+### createDevice
+Creates a new device.
+- Parameter: Data to create the device;
 
-## Setup
+### createDeviceToken
+Creates a new device token.
+- Parameter: ID of the device;
+- Parameter: Data to create the token;
 
-Setup is the name of object passed to the constructor of the ServiceModule.
+### getDeviceTokenList
+Retrieves a list of device tokens.
+- Parameter: ID of the device;
+- Parameter: Query to filter and organize the list;
 
-Like all other modules, the setup object **must have** an `id` and a `name` property. The setup object may also contain a `configs` property to request configuration parameters to the user. [Learn more about this property](https://npmjs.com/package/express).
+### deleteDeviceToken
+Deletes a device's token.
+- Parameter: Token of the device;
 
-## Usage
+### getDeviceParamList
+Gets all the parameters of a device.
+- Parameter: ID of the device;
+- Parameter: Sent status to filter the list;
 
-This sample code starts a simple starts an http server with [express](https://npmjs.com/package/express). When a `GET /` request is made to the server, the string `Hello World` will be sent back.
+### deleteDeviceParam
+Deletes a device's param.
+- Parameter: ID of the param;
 
-```js
-const { core } = require("@tago-io/tcore-sdk");
-const express = require('express');
-const app = express();
-let server = null;
+### setDeviceParams
+Overrides or edits device parameters.
+- Parameter: ID of the device;
+- Parameter: Data to override or edit the params;
 
-const myService = new ServiceModule({
-  id: "hello-world-service",
-  name: "Hello World service",
-});
+## Action functions
 
-// `onLoad` is used to run your code.
-// This function will be called once when your plugin gets loaded.
-myService.onLoad = async () => {
-  app.get('/', function (req, res) {
-    res.send('Hello World');
-  });
-  server = app.listen(3000);
-};
+All functions in this category need the `action` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
 
-// `onDestroy` is used to clean up your code.
-// This function will never be called before `onLoad`.
-myService.onDestroy = async () => {
-  server.close();
-};
-```
+### getActionTypes
+Retrieves a list of all action types.
+
+### getActionList
+Retrieves a list of actions.
+- Parameter: Query to filter and organize the list;
+
+### getActionInfo
+Retrieves all the information of a single action.
+- Parameter: ID of the action;
+
+### editAction
+Edits the information of a single action.
+- Parameter: ID of the action;
+- Parameter: Data to edit the action;
+
+### deleteAction
+Deletes a action.
+- Parameter: ID of the action;
+
+### createAction
+Creates a new action.
+- Parameter: Data to create the action;
+
+### triggerAction
+Triggers an action.
+- Parameter: ID of the action;
+- Parameter: Data to pass to the action;
+
+## Analysis functions
+
+All functions in this category need the `analysis` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
+
+### getAnalysisList
+Retrieves a list of analyses.
+- Parameter: Query to filter and organize the list;
+
+### getAnalysisInfo
+Retrieves all the information of a single analysis.
+- Parameter: ID of the analysis;
+
+### editAnalysis
+Edits the information of a single analysis.
+- Parameter: ID of the analysis;
+- Parameter: Data to edit the analysis;
+
+### deleteAnalysis
+Deletes a analysis.
+- Parameter: ID of the analysis;
+
+### createAnalysis
+Creates a new analysis.
+- Parameter: Data to create the analysis;
+
+## Device Data functions
+
+All functions in this category need the `device-data` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
+
+### getDeviceDataAmount
+Retrieves the amount of data in a device.
+- Parameter: ID of the device;
+
+### addDeviceData
+Adds a data item into a device.
+- Parameter: ID of the device;
+- Parameter: Data to be added;
+
+### getDeviceData
+Retrieves data from a device.
+- Parameter: ID of the device;
+- Parameter: Query to filter and organize the list;
+
+
+## Other functions
+
+These functions do not require any permissions.
+
+### getSummary
+Retrieves the summary information of TagoCore.
+
+### getTagKeys
+Retrieves the list of tags from a resource type.
 

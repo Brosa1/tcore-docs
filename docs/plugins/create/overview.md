@@ -96,7 +96,6 @@ This is an array that should contain all [module](#Modules) types used by your P
 Here are all the types of modules:
 
 - Payload Encoder Module: `encoder`
-- Payload Decoder Module: `decoder`
 - Service Module: `service`
 
 ### permissions
@@ -113,11 +112,10 @@ These are all the possibilities for this array:
 In TagoCore Plugins, all functionalities can be added via Modules. We currently offer these modules for you to use in your Plugin:
 
 - [Payload Encoder Module](/plugins/create/payload-encoder);
-- [Payload Decoder Module](/plugins/create/payload-decoder);
 - [Service Module](/plugins/create/service);
 
 ## Using a Module
 
 Once you have defined which modules you are going to use, it's time to actually use them. To create a new module you must require the appropriate module from the `@tago-io/tcore-sdk` package and instantiate them in your code.
 
-After you have instantiated your Module, you can override its functions in order to capture certain events in the Plugins lifecycle.
+After you have instantiated your Module, you can override its functions in order to capture or to react to certain events in the Plugins lifecycle.

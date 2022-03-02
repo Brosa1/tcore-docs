@@ -19,4 +19,16 @@ This option designed to load bundled (.tcore) files. If you have a simple Node.j
 
 ## Add to the Plugin Folder
 
-If your plugin is not bundled, you need to add its Node.js project to the `Plugin Folder` defined in your TagoCore's settings. After adding the project in that folder, simply restart TagoCore and your Plugin will be loaded.
+If your plugin is not bundled, you need to copy the Node.js project to a subfolder in the `Plugin Folder` defined in your TagoCore's settings. After copying the project in that folder, simply restart TagoCore and your Plugin will be loaded.
+
+This is how the structure in the `Plugin Folder` should look like:
+
+```
+plugin_folder
+  - my_plugin_1
+      package.json
+      ...
+  - my_plugin_2
+      package.json
+      ...
+```
