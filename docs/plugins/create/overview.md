@@ -87,7 +87,7 @@ TagoCore doesn't support html in the `full_description` file.
 Set the path of an image file to act as your Plugin's main icon. We recommend you use a `PNG` image for the icon.
 
 ### types
-This is an array that should contain all [module](#Modules) types used by your Plugin. For instance, if you are using a [Service Module](/plugins/creating-plugins/service) and a [Payload Encoder Module](/plugins/creating-plugins/payload-encoder) in your code, you should have an array like this:
+This is an array that should contain all [module](#Modules) types used by your Plugin. For instance, if you are using a [Service Module](/plugins/create/service) and a [Payload Encoder Module](/plugins/create/payload-encoder) in your code, you should have an array like this:
 
 ```json
 ["service", "encoder"]
@@ -100,7 +100,7 @@ Here are all the types of modules:
 - Service Module: `service`
 
 ### permissions
-This array specifies which API calls you will be able to make to TagoCore's API via the [core](plugins/creating-plugins/core) object. For instance, if you wish to create a new [Device](/device) via the `core.createDevice` function, you have need to add the `device` property to this permissions array.
+This array specifies which API calls you will be able to make to TagoCore's API via the [core](plugins/create/core) object. For instance, if you wish to create a new [Device](/device) via the `core.createDevice` function, you have need to add the `device` property to this permissions array.
 
 These are all the possibilities for this array:
 
@@ -112,9 +112,9 @@ These are all the possibilities for this array:
 
 In TagoCore Plugins, all functionalities can be added via Modules. We currently offer these modules for you to use in your Plugin:
 
-- [Payload Encoder Module](/plugins/creating-plugins/payload-encoder);
-- [Payload Decoder Module](/plugins/creating-plugins/payload-decoder);
-- [Service Module](/plugins/creating-plugins/service);
+- [Payload Encoder Module](/plugins/create/payload-encoder);
+- [Payload Decoder Module](/plugins/create/payload-decoder);
+- [Service Module](/plugins/create/service);
 
 ## Using a Module
 
