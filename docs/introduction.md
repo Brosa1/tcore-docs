@@ -46,6 +46,15 @@ Analyses allow you to implement scripts to analyze and manipulate data from any 
 
 Check out our [Analysis Overview](/analysis) to learn more.
 
+### Actions
+
+Actions enable you to execute an **action** when something happens in TagoCore. Here are some actions available for you to use:
+- Sending HTTP Requests;
+- Running Analyses;
+- Sending Data to TagoIO.
+
+Check out our [Action Overview](/action) to learn more.
+
 ### Plugins
 
 Missing something? Don't worry. With TagoCore you can install plugins from developers directly inside of the application! Our plugins range from **Raspberry Pi GPIO integrations** all the way to **MQTT connections**.

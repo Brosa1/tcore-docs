@@ -59,9 +59,10 @@ nav.menu {
 }
 
 code:not(code[class*='codeBlockLines']) {
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, .08);
   border: 0;
-  padding: 2px 7px;
+  padding: 2px 5px;
+  border-radius: 4px;
   --ifm-code-font-size: 90%;
 }
 
