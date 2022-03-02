@@ -6,7 +6,7 @@ slug: /analysis/console
 
 # Analysis Console
 
-The Analysis Console shows the output of your Analysis' code, as well as any validation errors that happened before your Analysis executed.
+The Analysis Console shows the output of your Analysis's code, as well as any validation errors that happened before your Analysis executed.
 
 The latest logs from your code will always be on top of the Console, and each log will have a timestamp that indicates when the log was outputted.
 
@@ -37,5 +37,5 @@ Clearing logs is a temporary measure, all the logs will be back if you leave the
 TagoCore offers the possibility to download the logs of your Analysis by clicking the &nbsp;<img src="/docs/img/icons/download.svg" width="15px" /> &nbsp;button located in the Console header. The logs will be downloaded as a **.txt** file.
 
 :::info
-Only the logs currently visible in the screen will be downloaded. If you clear the logs before downloading, the log file will be empty.
+Only the logs currently visible on the screen will be downloaded. If you clear the logs before downloading, the log file will be empty.
 :::

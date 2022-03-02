@@ -20,7 +20,7 @@ Payload Parsers can only be written in JavaScript.
 
 Inside of your JavaScript code, you can use the `payload` global variable to have access to the data sent by your device. You may also modify this global variable if you wish to change the data before it is saved in the Device's [Bucket](/bucket).
 
-The global `payload` will contain whatever you Device has sent in the body of the HTTP request, which means it doesn't have a specific type and can be an `array`, `object`, or even a `string` or `number`.
+The global `payload` will contain whatever your Device has sent in the body of the HTTP request, which means it doesn't have a specific type and can be an `array`, `object`, or even a `string` or `number`.
 
 :::tip Good to know
 - Your code **doesn't need** to be in a function;
@@ -38,7 +38,7 @@ This code sample shows how you can convert a `Celsius` temperature value to a `F
 // This code:
 // 1. Finds the temperature inside the payload sent by the device;
 // 2. Converts the value from Fahrenheit to Celsius;
-// 3. Adds the unit;
+// 3. Adds the unit.
 
 // To test this code, make sure your device sends a POST request
 // with a variable named "temperature".
