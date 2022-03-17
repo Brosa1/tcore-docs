@@ -6,7 +6,7 @@ slug: /download
 
 # Download Tagocore
 
-To get started, head over to our [Downloads page](https://tagocore.com/download) and grab the right version for you. We offer support to all major operating systems, in the form of the following architectures:
+To get started, head over to our [Downloads page](https://tagocore.com#download) and grab the right version for you. We offer support to all major operating systems, in the form of the following architectures:
 
 - Alpine x64
 - Alpine ARM64

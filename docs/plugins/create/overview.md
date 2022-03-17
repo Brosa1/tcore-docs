@@ -1,24 +1,26 @@
 ---
 sidebar_position: 1
-title: Overview
-slug: /plugins/create/overview
+title: Introduction
+slug: /plugins/create
 ---
 
-# Creating Plugin
+# Creating Plugins
 
-:::info
-You should use **Node.js version 14.x** or greater to build plugins for TagoCore.
-:::
+Plugins are programs or applications created by the community and TagoIO that extend the functionality of TagoCore.
 
-TagoCore Plugins are built using Node.js and the TagoCore Plugin SDK. The easiest way to start creating your plugin is to run `npm init --yes` in your plugin's folder project.
+Like TagoCore itself, Plugins are built using Node.js. You’ll need an understanding of **JavaScript** and Node.js to
+develop plugins. You should take a look at our [Prerequisites](/plugins/create/prerequisites) before starting.
 
-After creating your package.json, you should install the [TagoCore Plugin SDK](https://npmjs.com/package/@tago-io/tcore-sdk) library:
+The easiest way to start creating your plugin is by running the following commands in an empty folder:
 
 ```bash
+npm init --yes
 npm install @tago-io/tcore-sdk
 ```
 
-After installing the SDK, you are free to start playing around with your Plugin! If you want a quick start, here is a sample plugin that creates a Service Module that logs `Hello World!` when the plugin gets loaded and logs `Goodbye World!` when the plugin gets destroyed:
+By running those commands, a new project will be created and the [TagoCore Plugin SDK](https://npmjs.com/package/@tago-io/tcore-sdk) will be installed.
+
+Now you are free to start playing around with your Plugin! If you want a quick start, here is a sample file that creates a Service Module logging `Hello World!` when the plugin gets loaded and logging `Goodbye World!` when the plugin gets destroyed:
 
 ```js
 // Welcome to Building TagoCore plugins!
@@ -45,77 +47,28 @@ service.onDestroy = async () => {
 };
 ```
 
+## Manifest
 
-## Package attributes
-
-After generating your package.json, you must add a `tagocore` property to it, this is a sample JSON showing all attributes of the object:
-
-```json
-{
-  "tagocore": {
-    "name": "My Plugin Name",
-    "short_description": "Explain what your Plugin does in a few words",
-    "full_description": "./README.md",
-    "icon": "./assets/icon.png",
-    "types": [
-      "service",
-      "action-type",
-      "action-trigger"
-    ],
-    "permissions": [
-      "device",
-      "device-data"
-    ]
-  },
-}
-```
-
-### name
-This property must contain the name of your Plugin. This is the same name that will appear in the Plugin Store when you publish your plugin.
-
-### short_description
-Explain in up to 100 characters what your Plugin does.
-
-### full_description
-This property should contain a markdown file that will be rendered in the body of your Plugin Configuration. In the markdown file you explain your Plugin and its API in-depth. Developers usually use the `README.md` file in the root of the project.
-
-:::info Good to know
-TagoCore doesn't support html in the `full_description` file.
-:::
-
-### icon
-Set the path of an image file to act as your Plugin's main icon. We recommend you use a `PNG` image for the icon.
-
-### types
-This is an array that should contain all [module](#Modules) types used by your Plugin. For instance, if you are using a [Service Module](/plugins/create/service) and a [Payload Encoder Module](/plugins/create/encoder) in your code, you should have an array like this:
-
-```json
-["service", "encoder"]
-```
-
-Here are all the types of modules:
-
-- Payload Encoder Module: `encoder`
-- Service Module: `service`
-
-### permissions
-This array specifies which API calls you will be able to make to TagoCore's API via the [core](plugins/create/core) object. For instance, if you wish to create a new [Device](/device) via the `core.createDevice` function, you have need to add the `device` property to this permissions array.
-
-These are all the possibilities for this array:
-
-```json
-["action", "analysis", "device", "device-data"]
-```
+After generating your package.json, you must add a `tagocore` property to it to declare the manifest of the Plugin.
+Read more about it [here](/plugins/create/manifest).
 
 ## Modules
 
-In TagoCore Plugins, all functionalities can be added via Modules. We currently offer these modules for you to use in your Plugin:
+In TagoCore Plugins, all functionalities can be added via Modules.
 
-- [Payload Encoder Module](/plugins/create/encoder);
-- [Service Module](/plugins/create/service);
+We currently offer these types of Modules for you to use in your Plugin:
+
+- [Payload Encoder Module](/plugins/create/encoder) - To encode data before reaching a Bucket;
+- [Service Module](/plugins/create/service) - To create a service that runs code;
+- [Action Trigger Module](/plugins/create/action-trigger) - To create a new trigger for Actions;
+- Action Type Module - To create a new type for Actions;
+- Database Module - To create a database that will save TagoCore data.
 
 ## Using a Module
 
-Once you have defined which modules you are going to use, it's time to actually use them. To create a new module you must require the appropriate module from the `@tago-io/tcore-sdk` package and instantiate them in your code.
+Once you have defined which modules you are going to use, it's time to actually use them.
+To create a new module you must require the appropriate module from the `@tago-io/tcore-sdk`package and instantiate
+them in your code.
 
-After you have instantiated your Module, you can override its functions in order to capture or to react to certain events in the Plugins lifecycle.
+After you have instantiated your Module, you can override its functions in order to capture or to react to certain
+events in the Plugins lifecycle.

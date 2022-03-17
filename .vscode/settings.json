@@ -3,10 +3,13 @@
     "browserslist",
     "clsx",
     "easyops",
+    "Esbuild",
     "Infima",
     "matheuslbenachio",
+    "pluginstorage",
     "pluginstore",
     "tcore",
+    "tspan",
     "xvzf"
   ]
 }

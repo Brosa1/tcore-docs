@@ -84,3 +84,64 @@ p img {
   border-radius: 5px;
   vertical-align: bottom;
 }
+
+/* ------------- */
+/* MERMAID STUFF */
+/* ------------- */
+
+.mermaid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--ifm-paragraph-margin-bottom);
+}
+
+.mermaid rect.actor,
+.mermaid .node rect {
+  stroke: none !important;
+  fill: black !important;
+}
+
+.mermaid .actor tspan {
+  fill: white !important;
+  font-weight: bold;
+}
+
+.mermaid line:not([class^="messageLin"]) {
+  stroke: rgba(0, 0, 0, 0.2) !important;
+}
+
+html[data-theme='dark'] .mermaid line:not([class^="messageLin"]) {
+  stroke: rgba(255, 255, 255, 0.2) !important;
+}
+
+html[data-theme='dark'] .mermaid [class^="messageLin"] {
+  stroke: rgba(255, 255, 255, 1) !important;
+}
+
+.mermaid .messageText {
+  stroke: none !important;
+}
+
+html[data-theme='dark'] .mermaid .messageText {
+  stroke: rgba(255, 255, 255, 1) !important;
+}
+
+.mermaid * {
+  font-family: Monospace !important;
+  font-size: 16px;
+}
+
+.mermaid .node div {
+  color: white;
+}
+
+html[data-theme='dark'] .mermaid .edgePath * {
+  stroke: white !important;
+  fill: white !important;
+}
+
+.mermaid rect {
+  ry: 3;
+  rx: 3;
+}

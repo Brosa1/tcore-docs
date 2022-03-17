@@ -1,16 +1,18 @@
 ---
 sidebar_position: 4
-title: ActionTriggerModule
+title: Module - Action Trigger
 slug: /plugins/create/action-trigger
 ---
 
-# ActionTriggerModule
+# Action Trigger Module
 
-This Plugin module allows you to create a custom Action trigger. You decide when the action must be triggered.
+This Module allows you to create a custom Action trigger. You decide when the action must be triggered.
 
-An `ActionTriggerModule` will never be triggered by an external event, you must manually analyze the configuration and trigger the action. You are responsible for watching external events and triggering events.
+An `ActionTriggerModule` will never be triggered by an external event, you must manually analyze the configuration and
+trigger the action. You are responsible for watching external events and triggering events.
 
-For instance, if you were to develop an MQTT Plugin, you would need to manually watch all topics in your `ActionTriggerModule` configuration and decide if your action should be triggered or not.
+For instance, if you were to develop an MQTT Plugin, you would need to manually watch all topics in your
+`ActionTriggerModule` configuration and decide if your action should be triggered or not.
 
 ## Sample code
 

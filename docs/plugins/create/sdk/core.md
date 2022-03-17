@@ -6,16 +6,29 @@ slug: /plugins/create/core
 
 # Core
 
-The Core object allows your plugin to interact with data in a TagoCore application. In order to use the core object, you must call one of its functions. Here is a list of all core functions:
+The `core` object from the Plugin SDK allows your plugin to interact with TagoCore data.
 
 
 ## Device functions
 
-All functions in this category need the `device` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
+All functions in this category need the `device` [Permission](/plugins/create#permissions) in your manifest.
+You cannot use any of these functions without the appropriate permissions.
 
-### getDeviceList
-Retrieves a list of devices.
-- Parameter: Query to filter and organize the list;
+### Get all devices
+
+To retrieve the list of devices in TagoCore, use the `getDeviceList` function. You may pass additional parameters in the
+function to filter the results of the list.
+
+```js
+const { core } = require("@tago-io/tcore-sdk");
+
+async function getDeviceList() {
+  const list = await core.getDeviceList();
+  console.log("Retrieved", list.length, "devices"); // outputs 12 in my case
+}
+
+getDeviceList();
+```
 
 ### getDeviceInfo
 Retrieves all the information of a single device.
@@ -68,7 +81,8 @@ Overrides or edits device parameters.
 
 ## Action functions
 
-All functions in this category need the `action` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
+All functions in this category need the `action` [Permission](/plugins/create#permissions) in your manifest.
+You cannot use any of these functions without the appropriate permissions.
 
 ### getActionTypes
 Retrieves a list of all action types.
@@ -101,7 +115,7 @@ Triggers an action.
 
 ## Analysis functions
 
-All functions in this category need the `analysis` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
+All functions in this category need the `analysis` [Permission](/plugins/create#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
 
 ### getAnalysisList
 Retrieves a list of analyses.
@@ -126,7 +140,7 @@ Creates a new analysis.
 
 ## Device Data functions
 
-All functions in this category need the `device-data` [Permission](/plugins/create/overview#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
+All functions in this category need the `device-data` [Permission](/plugins/create#permissions) in your manifest. You cannot use any of these functions without the appropriate permissions.
 
 ### getDeviceDataAmount
 Retrieves the amount of data in a device.
