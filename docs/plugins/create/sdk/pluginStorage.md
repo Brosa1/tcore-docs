@@ -31,7 +31,7 @@ async function addKeyValuePair() {
 addKeyValuePair();
 ```
 
-## Retrieving single value
+## Retrieving a single value
 
 To retrieve a value associated to a key, use the use the `get` function. If the key doesn't exist, `undefined` will be
 returned as a result.
