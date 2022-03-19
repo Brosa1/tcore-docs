@@ -33,7 +33,7 @@ addKeyValuePair();
 
 ## Retrieving a single value
 
-To retrieve a value associated to a key, use the use the `get` function. If the key doesn't exist, `undefined` will be
+To retrieve a value associated to a key, use the `get` function. If the key doesn't exist, `undefined` will be
 returned as a result.
 
 Here is a code sample using that function:
@@ -52,7 +52,7 @@ getKeyValuePair();
 
 ## Retrieving all key-value pairs
 
-At some point you may want to retrieve all key-value pairs in the database. If that's case, use the
+At some point you may want to retrieve all key-value pairs in the database. If that's the case, use the
 `getAllItems` function. This function will return a key-value array containing all pairs in your Plugin's database.
 
 Here is a code sample using that function:
