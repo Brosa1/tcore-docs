@@ -29,10 +29,10 @@ sequenceDiagram
   Plugin Env-->>TagoCore: Success
 `}/>
 
-After TagoCore is started, it will iterate through each Plugin environment send a message for it to load. Once that
+After TagoCore is started, it will iterate through each Plugin environment and send a message for it to load. Once that
 message is received, the Plugin environment will make a call to the `onLoad` function of each module.
 
-Once all `onLoad` calls have been resolved, the Plugin environment sends a message to TagoCore, who in turn marks the
+Once all `onLoad` calls have been resolved, the Plugin environment sends a message to TagoCore, which in turn marks the
 Plugin as `started`.
 
 While the Plugin environment tries its best, it doesn't guarantee that the `onLoad` function of each module will be
@@ -56,12 +56,12 @@ sequenceDiagram
 `}/>
 
 
-The stop flow for each Plugin environment is very similar to the Start flow.
+The Stop flow for each Plugin environment is very similar to the Start flow.
 
 Whenever a Plugin needs to be terminated, the Plugin environment send a message for it to shutdown. Once that
 message is received, the Plugin environment will make a call to the `onDestroy` function of each module.
 
-Once all `onDestroy` calls have been resolved, the Plugin environment sends a message to TagoCore, who in turn marks the
+Once all `onDestroy` calls have been resolved, the Plugin environment sends a message to TagoCore, which in turn marks the
 Plugin as `stopped`.
 
 While the Plugin environment tries its best, it doesn't guarantee that the `onDestroy` function of each module will be
@@ -75,9 +75,9 @@ will be terminated.
 ## Errors during onLoad and onDestroy
 
 Sometimes an error in your code may result in an Error being thrown in the `onLoad` or `onDestroy` functions of a
-Module, or maybe you meant to throw because you have not received the correct `configs` from your Plugin's UI.
+Module, or maybe it meant to throw one because it had not received the correct `configs` from your Plugin's UI.
 
-In either case, errors may happen in these functions and that's acceptable. If an error occurs in those functions,
+In either case, errors may happen in these functions and that's acceptable. If an error occurs in these functions,
 the plugin will still be loaded normally and its state will still be `started`.
 
 However, the Module will have its state as `stopped` and the error will appear in the `Plugin Configuration`
