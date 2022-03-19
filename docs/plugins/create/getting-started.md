@@ -114,14 +114,14 @@ case, we are creating a Service Module so we must add a `service` type to the ma
 Your Plugin is ready. It doesn't do anything, but it can already be installed in TagoCore. Since you already have
 created your Plugin in TagoCore's default Plugin folder, all you have to do is restart TagoCore.
 
-Once you do so, you should see something like this as soon as application starts:
+Once you do so, you should see something like this as soon as the application starts:
 
 <img className="big-image" src="/docs/img/plugin/getting-started-loaded.png" height="40px" />
 
 
 ### Give users options
 
-Our Plugin is loaded but it doesn't do anything. Our goal is to create an HTTP server but we are not sure which
+Our Plugin is loaded but it doesn't do anything. Our goal is to create an HTTP server, but we are not sure which
 port is available in the system, so we will ask the user to set a port via the Plugin's UI.
 
 Head over to the `index.js` file and add a `configs` field to the Module's
