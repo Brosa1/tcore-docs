@@ -21,7 +21,7 @@ We currently offer these types of Modules for you to use in your Plugin:
 
 ## Setup
 
-Setup is the name of object passed to the constructor of the each Module class.
+Setup is the name of object passed to the constructor of each Module class.
 
 The setup object **must have** an `id` and a `name` property. The setup object may also contain a `configs`
 property to request configuration parameters to the user.
