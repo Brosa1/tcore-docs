@@ -101,7 +101,7 @@ Edits the information of a single action.
 - Parameter: Data to edit the action;
 
 ### deleteAction
-Deletes a action.
+Deletes an action.
 - Parameter: ID of the action;
 
 ### createAction
@@ -131,7 +131,7 @@ Edits the information of a single analysis.
 - Parameter: Data to edit the analysis;
 
 ### deleteAnalysis
-Deletes a analysis.
+Deletes an analysis.
 - Parameter: ID of the analysis;
 
 ### createAnalysis
